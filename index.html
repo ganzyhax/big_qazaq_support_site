@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Big Qazaq Support</title>
+<title>Поддержка Big Qazaq</title>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -30,6 +30,20 @@
         margin-top: 20px;
         border-top: 1px solid #ccc;
         padding-top: 20px;
+    }
+    .faq {
+        margin-top: 20px;
+    }
+    .faq-item {
+        margin-bottom: 15px;
+    }
+    .faq-question {
+        font-weight: bold;
+        color: #4CAF50;
+    }
+    .faq-answer {
+        margin-left: 20px;
+        color: #666;
     }
     .form-group {
         margin-bottom: 15px;
@@ -68,50 +82,66 @@
 <body>
 
 <div class="container">
-    <h1>Big Qazaq Support</h1>
+    <h1>Поддержка Big Qazaq</h1>
 
     <div class="support-info">
-        <h2>Support Information</h2>
-        <p>Welcome to Big Qazaq support. Please use the contact form below or reach out to us via email for assistance.</p>
+        <h2>Информация о поддержке</h2>
+        <p>Добро пожаловать в поддержку Big Qazaq. Используйте форму обратной связи ниже или свяжитесь с нами по электронной почте для получения помощи.</p>
+    </div>
+
+    <div class="faq">
+        <h2>Часто задаваемые вопросы (FAQ)</h2>
+        <div class="faq-item">
+            <p class="faq-question">Как связаться с нами?</p>
+            <p class="faq-answer">Вы можете связаться с нами через электронную почту или по телефону, указанным на этой странице.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Что делать, если у меня проблемы с доступом к курсам?</p>
+            <p class="faq-answer">Если у вас возникли проблемы с доступом к курсам, пожалуйста, сообщите нам через форму обратной связи или по электронной почте, и мы постараемся помочь вам как можно быстрее.</p>
+        </div>
+        <div class="faq-item">
+            <p class="faq-question">Как часто обновляется контент на вашей платформе?</p>
+            <p class="faq-answer">Мы стараемся регулярно обновлять контент нашей платформы, чтобы предоставлять пользователям актуальную информацию и материалы.</p>
+        </div>
     </div>
 
     <form id="contactForm" method="post">
         <div class="form-group">
-            <label for="name">Name:</label>
+            <label for="name">Имя:</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-            <label for="email">Email:</label>
+            <label for="email">Электронная почта:</label>
             <input type="email" id="email" name="email" required>
         </div>
         <div class="form-group">
-            <label for="message">Message:</label>
+            <label for="message">Сообщение:</label>
             <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <div class="form-group">
-            <button type="submit">Submit</button>
+            <button type="submit">Отправить</button>
         </div>
     </form>
 
     <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>Email: muxammederaliev@gmail.com</p>
-        <p>Phone: +77475419877</p>
+        <h2>Свяжитесь с нами</h2>
+        <p>Электронная почта: muxammederaliev@gmail.com</p>
+        <p>Телефон: +77475419877</p>
     </div>
 </div>
 
 <script>
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting
+        event.preventDefault(); // Предотвратить отправку формы
 
-        // Simulate form data
+        // Симуляция данных формы
         let formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
             message: document.getElementById('message').value
         };
 
-        // Simulate sending data to a server using fetch
+        // Симуляция отправки данных на сервер с использованием fetch
         fetch('https://jsonplaceholder.typicode.com/posts', {
             method: 'POST',
             headers: {
@@ -121,13 +151,13 @@
         })
         .then(response => response.json())
         .then(data => {
-            console.log('Server response:', data);
-            alert('Your message has been sent successfully.'); // Simulated success message
-            document.getElementById('contactForm').reset(); // Reset form
+            console.log('Ответ сервера:', data);
+            alert('Ваше сообщение успешно отправлено.'); // Симулированное сообщение об успехе
+            document.getElementById('contactForm').reset(); // Сброс формы
         })
         .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error sending your message. Please try again later.'); // Simulated error message
+            console.error('Ошибка:', error);
+            alert('При отправке вашего сообщения произошла ошибка. Пожалуйста, попробуйте позже.'); // Симулированное сообщение об ошибке
         });
     });
 </script>
