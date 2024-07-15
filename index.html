@@ -8,20 +8,60 @@
     body {
         font-family: Arial, sans-serif;
         margin: 20px;
+        background-color: #f0f0f0;
     }
     .container {
         max-width: 600px;
         margin: auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h1 {
         text-align: center;
         margin-bottom: 20px;
+        color: #333;
     }
     .support-info {
         margin-bottom: 20px;
     }
     .contact-info {
         margin-top: 20px;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #666;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    textarea {
+        resize: vertical;
+    }
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+    button[type="submit"]:hover {
+        background-color: #45a049;
     }
 </style>
 </head>
@@ -33,12 +73,6 @@
     <div class="support-info">
         <h2>Support Information</h2>
         <p>Welcome to Big Qazaq support. Please use the contact form below or reach out to us via email for assistance.</p>
-    </div>
-
-    <div class="contact-info">
-        <h2>Contact Us</h2>
-        <p>Email: muxammederaliev@gmail.com</p>
-        <p>Phone: +77475419877</p>
     </div>
 
     <form id="contactForm" method="post">
@@ -58,6 +92,12 @@
             <button type="submit">Submit</button>
         </div>
     </form>
+
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Email: muxammederaliev@gmail.com</p>
+        <p>Phone: +77475419877</p>
+    </div>
 </div>
 
 <script>
