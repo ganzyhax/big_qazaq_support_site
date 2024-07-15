@@ -3,47 +3,45 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Form</title>
+<title>Big Qazaq Support</title>
 <style>
     body {
         font-family: Arial, sans-serif;
         margin: 20px;
     }
     .container {
-        max-width: 400px;
+        max-width: 600px;
         margin: auto;
     }
-    .form-group {
-        margin-bottom: 15px;
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
     }
-    .form-group label {
-        display: block;
-        margin-bottom: 5px;
+    .support-info {
+        margin-bottom: 20px;
     }
-    .form-group input {
-        width: 100%;
-        padding: 8px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-    .form-group button {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        cursor: pointer;
-        border-radius: 4px;
-        font-size: 16px;
+    .contact-info {
+        margin-top: 20px;
     }
 </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Big Qazaq</h1>
-    <h2>Contact Form</h2>
-    <form id="contactForm">
+    <h1>Big Qazaq Support</h1>
+
+    <div class="support-info">
+        <h2>Support Information</h2>
+        <p>Welcome to Big Qazaq support. Please use the contact form below or reach out to us via email for assistance.</p>
+    </div>
+
+    <div class="contact-info">
+        <h2>Contact Us</h2>
+        <p>Email: muxammederaliev@gmail.com</p>
+        <p>Phone: +77475419877</p>
+    </div>
+
+    <form id="contactForm"  method="post">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
@@ -51,6 +49,10 @@
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
         </div>
         <div class="form-group">
             <button type="submit">Submit</button>
@@ -62,10 +64,28 @@
     document.getElementById('contactForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting
 
-        // Display the notification
-        alert('Your data has been sent.');
+        // Here you can add logic to handle form submission, such as sending data to a server
+        // For demonstration, an alert is shown
+        alert('Your message has been sent.');
 
-        // You can add additional logic here to actually send the form data to a server using AJAX or other methods
+        // You can also use fetch or XMLHttpRequest to send data to a server asynchronously
+        /*
+        fetch('https://example.com/submit-form.php', {
+            method: 'POST',
+            body: new FormData(document.getElementById('contactForm'))
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Form submitted successfully');
+            } else {
+                alert('Form submission failed');
+            }
+        })
+        .catch(error => {
+            alert('Error submitting form');
+            console.error('Error:', error);
+        });
+        */
     });
 </script>
 
